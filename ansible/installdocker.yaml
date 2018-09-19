@@ -1,0 +1,7 @@
+---
+- hosts: 10.16.26.2
+  become_user: qss
+  tasks:
+    - name: running docker ee install script
+      shell: >
+       /home/qss/install-docker-ee-nebula.sh --version 17.06.2~ee~6-0~ubuntu --url https://storebits.docker.com/ee/ubuntu/sub-c2877e2a-64b9-4e77-b5c7-32114b8fa495

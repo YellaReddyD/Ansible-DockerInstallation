@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become_user: qss
+  tasks:
+    - name: example copying file with owner and permissions
+      copy:
+         src: /home/qss/ansible/install-docker-ee-nebula.sh
+         dest: /home/qss/install-docker-ee-nebula.sh
+         owner: qss
+         group: qss
+         mode: 0744

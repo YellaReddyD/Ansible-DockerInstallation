@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become_user: qss
+  tasks:
+    - name: create the first ucp manager
+      shell: >
+        cat /home/qss/dockerinfo.log
